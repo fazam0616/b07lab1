@@ -1,5 +1,5 @@
 public class Polynomial{
-	public double[] coeff;
+	private double[] coeff;
 	public Polynomial(){
 		this.coeff = new double[]{0};
 	}
