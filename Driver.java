@@ -1,5 +1,8 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+
 public class Driver{
-	public static void main(String[] args){
+	public static void main(String[] args) throws FileNotFoundException {
 		Polynomial p = new Polynomial();
 		System.out.println(p.evaluate(3));
 		double [] c1 = {6,0,0,5};
@@ -18,5 +21,7 @@ public class Driver{
 		Polynomial p3 = new Polynomial(new double[]{1,1,7},new double[]{2,3,0});
 		Polynomial p4 = new Polynomial(new double[]{1,2},new double[]{4,1});
 		Polynomial p5 = p3.multiply(p4);
+		Polynomial p6 = new Polynomial(new File("eqn.txt"));
+		p6.saveToFile("out.txt");
 	}
 }
